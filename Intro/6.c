@@ -11,9 +11,9 @@ int main() {
 
 	buf = getpwuid(uid);
 
-	printf ("Nombre: %s\n", buf->pw_name);
-	printf ("Información: %s\n", buf->pw_gecos);
-	printf ("Directorio: %s\n", buf->pw_dir);
+	printf("Nombre: %s\n", buf->pw_name);
+	printf("Información: %s\n", buf->pw_gecos);
+	printf("Directorio: %s\n", buf->pw_dir);
 
-return 1;
+return 0;
 }
