@@ -3,12 +3,7 @@
 
 int main()
 {
-	int i;
-
-	for(i = 0; i<255; i++){
+	for(int i = 0; i<255; i++)
 		printf("Error %i: %s \n", i, strerror(i));
-
-	}
-    
-	return 1;
+return 0;
 }
