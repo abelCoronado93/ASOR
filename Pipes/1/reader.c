@@ -8,8 +8,6 @@
 int main()
 {
     int fd;
-   
-
     char buf[MAX_BUF];
 
     /* open, read, and display the message from the FIFO */
