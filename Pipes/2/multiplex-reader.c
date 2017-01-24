@@ -1,6 +1,5 @@
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <fcntl.h>
 #include <stdio.h>
 #include <errno.h>
 #include <sys/select.h>
@@ -19,7 +18,7 @@ int main(){
 
 	fd_set readset;
 	
-	do{
+	do {
 		FD_ZERO(&readset); //Inicializamos readset como conjunto vacío
 		FD_SET(fd1, &readset);	//Añadimos fd1 a set
 		FD_SET(fd2, &readset);	//Añadimos fd2 a set
