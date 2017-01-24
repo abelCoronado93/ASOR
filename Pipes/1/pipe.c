@@ -9,7 +9,7 @@
 
 int main(int argc, char **argv){
 
-	int rc = mkfifo("./tuberia2", 0777);
+	int rc = mkfifo("./tuberia", 0777);
 
 	if(rc == -1){
 		perror("Error mkfifo()");
