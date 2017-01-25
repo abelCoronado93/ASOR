@@ -4,7 +4,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <netdb.h>
-
+#include <errno.h>
 
 void main(int argc, char ** argv){
 
@@ -20,7 +20,10 @@ void main(int argc, char ** argv){
 	hints.ai_socktype = SOCK_DGRAM;
 	hints.ai_protocol = 0;
 
-	getaddrinfo("::", argv[1], &hints, &res);
+	if (getaddrinfo("::", argv[1], &hints, &res) == -1){
+		perror("Error al llamar a getaddrinfo");
+		return errno;
+	}
 
 	int sd = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
 
